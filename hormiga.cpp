@@ -7,11 +7,6 @@ hormiga::hormiga(int x, int y) {
     this->rejilla = -1;
 }
 
-/*hormiga::hormiga(const hormiga& orig) {
-}*/
-
-
-    
 void hormiga::mover() {
 }
 
