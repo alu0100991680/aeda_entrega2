@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>hormiga.h</itemPath>
+      <itemPath>maquina.h</itemPath>
+      <itemPath>rejilla.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +15,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>hormiga.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>maquina.cpp</itemPath>
+      <itemPath>rejilla.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +42,19 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="hormiga.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hormiga.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maquina.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maquina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rejilla.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="rejilla.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +77,19 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="hormiga.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="hormiga.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maquina.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="maquina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="rejilla.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="rejilla.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
