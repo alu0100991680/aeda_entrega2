@@ -19,6 +19,8 @@ public:
     
     //Atrib
     string get_rejilla_status();
+    int get_position_status(int x, int y);
+    void set_position_status(int x, int y, int value_color);
     
     //Extra
     enum colores {negro=0, blanco=1};
