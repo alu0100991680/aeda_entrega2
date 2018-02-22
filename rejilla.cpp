@@ -47,6 +47,18 @@ void rejilla::set_position_status(int x, int y, int value_color){
     this->c_rejilla[x][y] = value_color;
 }
 
+void rejilla::add_hormiga(hormiga &h){
+    this->hormigas.push_back(h);
+}
+
+int rejilla::cantidad_hormigas(){
+    this->hormigas.size();
+}
+
+hormiga& rejilla::ver_hormiga(int pos){
+    return this->hormigas[pos];
+}
+
 rejilla::rejilla(const rejilla& orig) {
 }
 

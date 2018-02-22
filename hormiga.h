@@ -8,8 +8,8 @@ using namespace std;
 class hormiga {
 public:
     //Métodos básicos
-    hormiga();
-    hormiga(const hormiga& orig);
+    hormiga(int x, int y);
+    //hormiga(const hormiga& orig);
     virtual ~hormiga();
     
     //Atrib

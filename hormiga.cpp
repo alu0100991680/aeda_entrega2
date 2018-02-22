@@ -1,11 +1,17 @@
 #include "hormiga.h"
 
-hormiga::hormiga() {
+hormiga::hormiga(int x, int y) {
+    this->x = x;
+    this->y = y;
+    this->direccion_display = -1;
+    this->rejilla = -1;
 }
 
-hormiga::hormiga(const hormiga& orig) {
-}
+/*hormiga::hormiga(const hormiga& orig) {
+}*/
 
+
+    
 void hormiga::mover() {
 }
 
