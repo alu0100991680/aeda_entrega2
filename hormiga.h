@@ -16,7 +16,7 @@ public:
     //Atrib
     int get_x();
     int get_y();
-    string get_direccion_display();
+    //string get_direccion_display();
     
     //Métodos internos
     void mover();
