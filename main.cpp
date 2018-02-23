@@ -6,17 +6,42 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    
-    hormiga *a = new hormiga(1,2);
-    
-    rejilla *r = new rejilla(10,5);
+
+    rejilla *r = new rejilla(10,10);
     r->set_position_status(2, 3, 0);
     cout << r->get_rejilla_status() << endl;
     
-    r->add_hormiga(*a);
-    cout << r->cantidad_hormigas() << endl;
-    hormiga a2 = r->ver_hormiga(0);
+    hormiga *a = new hormiga(2,3,r);
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();    
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
+    a->mover();
     
+    r->set_position_status(a->get_x(), a->get_y(), 8);
+    cout << r->get_rejilla_status() << endl;
+
+    //r->add_hormiga(*a);
+    //cout << r->cantidad_hormigas() << endl;
+    //hormiga a2 = r->ver_hormiga(0);
+
     return 0;
 }
 

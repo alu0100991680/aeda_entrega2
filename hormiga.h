@@ -2,13 +2,14 @@
 #define HORMIGA_H
 
 #include <string>
+#include "rejilla.h"
 
 using namespace std;
 
 class hormiga {
 public:
     //Métodos básicos
-    hormiga(int x, int y);
+    hormiga(int x, int y, rejilla *r);
     //hormiga(const hormiga& orig);
     virtual ~hormiga();
     
@@ -26,7 +27,7 @@ private:
     int x;
     int y;
     int direccion_display;
-    int rejilla; // una regilla pertenece a muchas  hormigas  1.reg-N.hor
+    rejilla *r_asocida;
 };
 
 #endif /* HORMIGA_H */

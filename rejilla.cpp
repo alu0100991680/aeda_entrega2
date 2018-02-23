@@ -27,10 +27,17 @@ string rejilla::get_rejilla_status(){
     for (int i = 0; i < this->dx; ++i){
         for (int j = 0; j < this->dy; ++j){
             if (this->c_rejilla[i][j]==0){
-                aux_ += "X ";
+                //aux_ += "X ";
+                aux_ += "0 ";
             }
             if (this->c_rejilla[i][j]==1){
-                aux_ += "  ";
+                //aux_ += "  ";
+                aux_ += "1 ";
+            }
+            // Test
+            if (this->c_rejilla[i][j]==8){
+                //aux_ += "  ";
+                aux_ += "8 ";
             }
         }
         aux_ += "\r\n";
@@ -47,7 +54,7 @@ void rejilla::set_position_status(int x, int y, int value_color){
     this->c_rejilla[x][y] = value_color;
 }
 
-void rejilla::add_hormiga(hormiga &h){
+/*void rejilla::add_hormiga(hormiga &h){
     this->hormigas.push_back(h);
 }
 
@@ -57,10 +64,10 @@ int rejilla::cantidad_hormigas(){
 
 hormiga& rejilla::ver_hormiga(int pos){
     return this->hormigas[pos];
-}
+}*/
 
-rejilla::rejilla(const rejilla& orig) {
-}
+/*rejilla::rejilla(const rejilla& orig) {
+}*/
 
 rejilla::~rejilla() {
 }
