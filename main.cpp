@@ -8,35 +8,20 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    rejilla *r = new rejilla(15,15);
+    rejilla *r = new rejilla(100,100);
     
-    hormiga *a = new hormiga(2,7,r);
-    hormiga *b = new hormiga(5,7,r);
+    hormiga *a = new hormiga(50,50,r);
+    //hormiga *b = new hormiga(5,7,r);
     
     maquina *m = new maquina(r);
     m->add_hormiga(a);
-    m->add_hormiga(b);
+    //m->add_hormiga(b);
     
-    m->iteracion();
+    for (int i=0;i<15000;i++){
+        m->iteracion();
+    }
     cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    cout << m->estado();
-    m->iteracion();
-    
-    cout << m->estado();
-    
+        
     return 0;
 }
 

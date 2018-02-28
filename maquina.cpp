@@ -37,10 +37,10 @@ string maquina::estado(){
                     
             if (copy_r->get_position_status(i, j)=='0'){
                 //aux_ += "X ";
-                string_rejilla += "0";
+                string_rejilla += "X";
             }else if(copy_r->get_position_status(i, j)=='1'){
                 //aux_ += "  ";
-                string_rejilla += "1";
+                string_rejilla += " ";
             }else{
                 string_rejilla += copy_r->get_position_status(i, j);
             }

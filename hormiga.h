@@ -20,6 +20,7 @@ public:
     char get_direccion_display();
     
     //Métodos internos
+    void modificar_posicion(int _x, int _y);
     void mover();
     
     //Extra
