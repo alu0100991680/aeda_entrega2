@@ -8,14 +8,34 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    rejilla *r = new rejilla(10,10);
-    r->set_position_status(2, 3, 0);
-
-    hormiga *a = new hormiga(2,3,r);
-    a->mover();
-
-    maquina *m = new maquina();
+    rejilla *r = new rejilla(15,15);
+    
+    hormiga *a = new hormiga(2,7,r);
+    hormiga *b = new hormiga(5,7,r);
+    
+    maquina *m = new maquina(r);
     m->add_hormiga(a);
+    m->add_hormiga(b);
+    
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    cout << m->estado();
+    m->iteracion();
+    
+    cout << m->estado();
     
     return 0;
 }

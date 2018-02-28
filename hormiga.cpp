@@ -12,12 +12,12 @@ void hormiga::mover() {
     int color_actual  = this->r_asocida->get_position_status(this->x, this->y);
     
     //Comportamientos
-    if (color_actual==0){ //Negro
+    if (color_actual=='0'){ //Negro
         if (this->direccion_display == 0){ // Giro a la der desde ^
             //Giramos a la derecha
             this->direccion_display = 2; // >
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 1); // Pasa blanco
+            (*this->r_asocida).set_position_status(this->x, this->y, '1'); // Pasa blanco
             //Movemos hormiga
             this->x = this->x; //Avance derecha
             this->y = this->y+1;
@@ -25,7 +25,7 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 3; // <
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 1); // Pasa blanco
+            (*this->r_asocida).set_position_status(this->x, this->y, '1'); // Pasa blanco
             //Movemos hormiga
             this->x = this->x; // Avance izqu
             this->y = this->y-1;
@@ -33,7 +33,7 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 1; // v
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 1); // Pasa blanco
+            (*this->r_asocida).set_position_status(this->x, this->y, '1'); // Pasa blanco
             //Movemos hormiga
             this->x = this->x+1; // Avance abajo
             this->y = this->y; 
@@ -41,17 +41,17 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 0; // ^
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 1); // Pasa blanco
+            (*this->r_asocida).set_position_status(this->x, this->y, '1'); // Pasa blanco
             //Movemos hormiga
             this->x = this->x-1; // Avance arriba
             this->y = this->y;   
         }
-    }else if (color_actual==1){ // Blanco
+    }else if (color_actual=='1'){ // Blanco
         if (this->direccion_display == 0){ // Giro a la der desde ^
             //Giramos a la derecha
             this->direccion_display = 3; // <
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 0); // Pasa negro
+            (*this->r_asocida).set_position_status(this->x, this->y, '0'); // Pasa negro
             //Movemos hormiga
             this->x = this->x; //Avance izquierda
             this->y = this->y-1;
@@ -59,7 +59,7 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 2; // >
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 0); // Pasa negro
+            (*this->r_asocida).set_position_status(this->x, this->y, '0'); // Pasa negro
             //Movemos hormiga
             this->x = this->x; // Avance derecha
             this->y = this->y+1;
@@ -67,7 +67,7 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 0; // ^
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 0); // Pasa negro
+            (*this->r_asocida).set_position_status(this->x, this->y, '0'); // Pasa negro
             //Movemos hormiga
             this->x = this->x-1; // Avance arriba
             this->y = this->y; 
@@ -75,7 +75,7 @@ void hormiga::mover() {
             //Giramos a la derecha
             this->direccion_display = 1; // v
             //Cambiamos de 0 a 1
-            (*this->r_asocida).set_position_status(this->x, this->y, 0); // Pasa negro
+            (*this->r_asocida).set_position_status(this->x, this->y, '0'); // Pasa negro
             //Movemos hormiga
             this->x = this->x+1; // Avance arriba
             this->y = this->y;   
@@ -91,20 +91,24 @@ int hormiga::get_y() {
     return this->y;
 }
 
-/*string hormiga::get_direccion_display() {
+rejilla * hormiga::get_rejilla(){
+    return this->r_asocida;
+}
+
+char hormiga::get_direccion_display() {
     if(this->direccion_display == arriba){
-        return "^";
+        return '^';
     }
     if(this->direccion_display == abajo){
-        return "v";
+        return 'v';
     }    
     if(this->direccion_display == izquierda){
-        return "<";
+        return '<';
     }    
     if(this->direccion_display == derecha){
-        return ">";
+        return '>';
     }
-}*/
+}
 
 hormiga::~hormiga() {
 }

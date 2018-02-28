@@ -14,7 +14,7 @@ rejilla::rejilla(int dx, int dy) {
     for (int i = 0; i < dx; ++i){
         for (int j = 0; j < dy; ++j){
             // Default = 1 Blanco
-            this->c_rejilla[i][j] = 1;
+            this->c_rejilla[i][j] = '1';
         }
     }
     
@@ -22,22 +22,25 @@ rejilla::rejilla(int dx, int dy) {
     //this->c_rejilla[2][3] = 0;
 }
 
+int rejilla::get_size_x(){
+    return this->dx;
+}
+
+int rejilla::get_size_y(){
+    return this->dy;
+}
+
 string rejilla::get_rejilla_status(){
     string aux_ = "";
     for (int i = 0; i < this->dx; ++i){
         for (int j = 0; j < this->dy; ++j){
-            if (this->c_rejilla[i][j]==0){
+            if (this->c_rejilla[i][j]=='0'){
                 //aux_ += "X ";
                 aux_ += "0 ";
             }
-            if (this->c_rejilla[i][j]==1){
+            if (this->c_rejilla[i][j]=='1'){
                 //aux_ += "  ";
                 aux_ += "1 ";
-            }
-            // Test
-            if (this->c_rejilla[i][j]==8){
-                //aux_ += "  ";
-                aux_ += "8 ";
             }
         }
         aux_ += "\r\n";
@@ -46,11 +49,11 @@ string rejilla::get_rejilla_status(){
 }
 
 
-int rejilla::get_position_status(int x, int y){
+char rejilla::get_position_status(int x, int y){
     return this->c_rejilla[x][y];
 }
 
-void rejilla::set_position_status(int x, int y, int value_color){
+void rejilla::set_position_status(int x, int y, char value_color){
     this->c_rejilla[x][y] = value_color;
 }
 
@@ -66,8 +69,11 @@ hormiga& rejilla::ver_hormiga(int pos){
     return this->hormigas[pos];
 }*/
 
-/*rejilla::rejilla(const rejilla& orig) {
-}*/
+rejilla::rejilla(const rejilla& orig) {
+    this->dx = orig.dx;
+    this->dy = orig.dy;
+    this->c_rejilla = orig.c_rejilla;
+}
 
 rejilla::~rejilla() {
 }
