@@ -31,6 +31,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>readme.md</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -51,6 +52,8 @@
       <item path="maquina.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="maquina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="readme.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="rejilla.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -86,6 +89,8 @@
       <item path="maquina.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="maquina.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="readme.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="rejilla.cpp" ex="false" tool="1" flavor2="0">
       </item>
