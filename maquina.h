@@ -10,9 +10,7 @@ using namespace std;
 class maquina {
 public:
     maquina(rejilla *r);
-    maquina(const maquina& orig);
     virtual ~maquina();
-    
     void add_hormiga(hormiga *h);
     void iteracion();
     string estado();

@@ -17,9 +17,6 @@ rejilla::rejilla(int dx, int dy) {
             this->c_rejilla[i][j] = '1';
         }
     }
-    
-    //Test
-    //this->c_rejilla[2][3] = 0;
 }
 
 int rejilla::get_size_x(){
@@ -56,18 +53,6 @@ char rejilla::get_position_status(int x, int y){
 void rejilla::set_position_status(int x, int y, char value_color){
     this->c_rejilla[x][y] = value_color;
 }
-
-/*void rejilla::add_hormiga(hormiga &h){
-    this->hormigas.push_back(h);
-}
-
-int rejilla::cantidad_hormigas(){
-    this->hormigas.size();
-}
-
-hormiga& rejilla::ver_hormiga(int pos){
-    return this->hormigas[pos];
-}*/
 
 rejilla::rejilla(const rejilla& orig) {
     this->dx = orig.dx;

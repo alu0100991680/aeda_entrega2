@@ -4,9 +4,6 @@ maquina::maquina(rejilla *r) {
     this->r = r;
 }
 
-maquina::maquina(const maquina& orig) {
-}
-
 maquina::~maquina() {
 }
 
@@ -36,10 +33,8 @@ string maquina::estado(){
             //this->
                     
             if (copy_r->get_position_status(i, j)=='0'){
-                //aux_ += "X ";
                 string_rejilla += "X";
             }else if(copy_r->get_position_status(i, j)=='1'){
-                //aux_ += "  ";
                 string_rejilla += " ";
             }else{
                 string_rejilla += copy_r->get_position_status(i, j);
